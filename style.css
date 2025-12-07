@@ -1,0 +1,150 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1 {
+    color: #007bff;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+h2, h3 {
+    color: #555;
+    margin-top: 20px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    width: 100%;
+    max-width: 600px;
+    margin: 30px 0;
+}
+
+/* --- Form Styling (Add New Movie) --- */
+#add-movie-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#add-movie-form input[type="text"],
+#add-movie-form input[type="number"] {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#add-movie-form input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#add-movie-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+#add-movie-form button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* --- Search Input Styling --- */
+#search-input {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* --- Movie List Styling --- */
+#movie-list {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-bottom: 40px; /* Space at the bottom */
+}
+
+.movie-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid #007bff; /* Highlight for items */
+}
+
+.movie-item p {
+    margin: 0;
+    flex-grow: 1;
+    font-size: 1.1em;
+}
+
+.movie-item button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Edit Button */
+.movie-item button:nth-of-type(1) { /* Edit button */
+    background-color: #ffc107;
+    color: #333;
+}
+
+.movie-item button:nth-of-type(1):hover {
+    background-color: #e0a800;
+}
+
+/* Delete Button */
+.movie-item button:nth-of-type(2) { /* Delete button */
+    background-color: #dc3545;
+    color: white;
+}
+
+.movie-item button:nth-of-type(2):hover {
+    background-color: #c82333;
+}
+
+/* Placeholder for when the list is empty */
+#movie-list p {
+    text-align: center;
+    font-style: italic;
+    color: #999;
+}
